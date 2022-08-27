@@ -1,0 +1,1 @@
+ nohup waitress-serve --host 0.0.0.0 app:app > log.txt 2>&1 & exit
