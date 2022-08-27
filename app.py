@@ -12,13 +12,11 @@ app = Flask(__name__)
 # The route() function of the Flask class is a decorator,
 # which tells the application which URL should call
 # the associated function.
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 # ‘/’ URL is bound with hello_world() function.
 def main_page():
-    username = request.args.get('username')
-    password = request.args.get('password')
-
-    if(username == "admin" and password == "admin"):
+    password = request.form.get("password")
+    if(password == "1990"):
         return render_template("mainpage.html")
     else:
         return render_template('login.html')
