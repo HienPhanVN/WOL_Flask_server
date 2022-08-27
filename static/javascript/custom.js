@@ -1,5 +1,5 @@
 function WOL(){
-    $.get("http://localhost:5000/WOL",function(){
+    $.get(window.location.origin+"/WOL",function(){
         alert("Completed")
     });
 }
